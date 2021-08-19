@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Jon Alderink Portfolio-o-rama</title>
+		<script src="https://unpkg.com/intersection-observer"></script>
+		<script src="https://unpkg.com/scrollama"></script>
+		<!-- BS scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+
+	<body>
+		<section id="intro" class="container-fluid h-100">
+			<h1 class="title">A Case Study</h1>
+			<span class="author">by Jon Alderink</span>
+			<p class="content">This page uses CSS Grid for it's layout, so if you're on IE...well...you know. There's a window right over there to jump out of. It might be from your kitchen and only 3 feet off of the ground, but it will teach you a lesson.</p>
+
+			<!-- <span class="arrow content text-rotate">m</span> -->
+		</section>
+
+		<section id="pageOne" class="container-fluid py-5">
+			<h1 class="header step">Sketches & Mocks</h1>
+			<img class="step image2 img-fluid" src="./images/UI_sketches.jpg" alt="Wireframe sketches">
+			<img class="step image1 img-fluid" src="./images/mock_desktop_view.png" alt="First mock">
+
+			<div class="step content">
+				<p>I was tasked with creating portal designs for an upcoming suite of HR Onboarding courses and tying it together with the several design styles that would be established by other designers.</p>
+				<p>Our first directive was to create a visual style without knowing exactly what the content would be for these courses. Since I had nothing to go on, I focused on creating an experience that was different from previous portal designs.</p>
+				<p>I looked to print materials and magazines for inspiration and the idea of using CSS Grid for the portal to create a layout that would dynamically change dependent on the device.</p>
+				<p>Elements shift or disappear altogether as the design moves from desktop to mobile view.</p>
+				<p>A felt texture was used in the background to create a sense of soft tactility.</p>
+			</div>
+
+		</section>
+		<section id="pageTwo" class="container-fluid py-5">
+			<h1 class="header">Transparency Was Key</h1>
+			<img class="step image2 img-fluid" src="./images/page_2_img_1.jpg" alt="First image">
+			<div class="content step">
+				<p>Not necessarily in the visual sense, but in the collaborative sense. Before going down the rabbit hole too far I reached out to the keeper of the data keys to ask about functionality and feasibility.</p>
+				<p>After a brief conversation it was decided to nix the CSS Grid idea. The layout changed to fit within the Bootstrap rules and logos were made.</p>
+				<p>I continued exploring light and airy motifs for the design to brighten and lift the emotions of users.</p>
+			</div>
+		</section>
+
+		<section id="pageThree" class="container-fluid py-5">
+			<h1 class="header">Something A Little Darker</h1>
+			<img class="image1 step img-fluid" src="./images/page3_img1.jpg" alt="First image">
+			<img class="image2 step img-fluid" src="./images/page3_img2.jpg" alt="First image">
+			<div class="content step">
+				<p>To give the client a few more choices, I pushed in the other direction and went with a darker theme. It was received well by the client, but there was a problem.</p>
+				<p>The client and other designers that I polled in the company were split 50/50.</p>
+				<p>It was time for some guerilla user research. After all, it’s the learner that will be looking at this thing time after time. Not the Client. Not me. Not the other designers. It’s not something we budget for, so I went rogue.</p>
+			</div>
+		</section>
+
+		<section id="pageFour" class="container-fluid py-5">
+			<h1 class="header">C’s the Day</h1>
+			<!-- <video class="video1 img-fluid" src="./images/portal_flow.mp4" autoplay controls poster="./images/video1_poster.jpg"></video> -->
+			<img class="image1 step img-fluid" src="./images/page4_img1.png" alt="First image">
+			<div class="content step">
+				<p>To find some more concrete answers instead of spinning my wheels and designing for design sake I joined a few HR Facebook groups and reach out on Linked in to a former colleague for feedback.</p>
+				<p>Overwhelmingly, votes came in for the lighter (C) theme. I removed more junk from the cards after one user commented, “[I] like the completion percentage in bold, draws attention. Also the subject chunks don’t have as many tiles on initial
+					viewing, looks less daunting in my opinion.”</p>
+				<p>I had some qualitative data and found some quantitative data from the Nielson Norman Group website to steer the direction for the nav. I decided to retain the light theme and some ‘glass’ elements, took out clutter and put together a
+					persistent side nav for faster and easier navigation. Previous portal experiences led to getting lost in the site structure and not knowing where to go or how to get back “Home”.</p>
+			</div>
+		</section>
+
+		<section id="pageFive" class="py-5">
+			<div class="w-5 h-1">
+				<h1 class="header">A Deluge</h1>
+				<p>Random smatterings of other stuff.</p>
+			</div>
+			<div class="img-container h-2">
+				<div class="image">
+					<img src="./images/page5_img2.jpg" alt="First image">
+				</div>
+			</div>
+			<div class="img-container w-2 h-2">
+				<div class="image">
+					<img src="./images/chameleon_Tool_panel.jpg" alt="First image">
+				</div>
+			</div>
+			<div class="img-container w-2 h-2">
+				<div class="image">
+					<img src="./images/page5_img3.jpg" alt="Portal Dashboard image">
+				</div>
+			</div>
+			<div class="img-container w-1 h-3">
+				<div class="image">
+					<img src="./images/mock_phone_view.png" alt="Phone View mockup image">
+				</div>
+			</div>
+			<div class="img-container w-2 h-3">
+				<div class="image">
+					<img src="./images/mock_tablet_view.png" alt="Tablet view mockup image">
+				</div>
+			</div>
+			<div class="img-container w-2 h-3">
+				<div class="image">
+					<img src="./images/UI_components.jpg" alt="Reowrked UI components image">
+				</div>
+			</div>
+			<div class="img-container w-1 h-3">
+				<div class="image">
+					<img src="./images/tall_old_UI.png" alt="Old gross UI image">
+				</div>
+			</div>
+			<div class="img-container w-2 h-3">
+				<div class="image">
+					<img src="./images/CE_example.png" alt="Consumers Energy Interaction example">
+				</div>
+			</div>
+			<div class="img-container h-3">
+				<div class="image">
+					<img src="./images/Portal_Landing _mobile.png" alt="Portal mobile landing page image">
+				</div>
+			</div>
+			<div class="img-container h-3">
+				<div class="image">
+					<img src="./images/mobile_nav.png" alt="Portal mobile nav image">
+				</div>
+			</div>
+		</section>
+		<section id="end" class="container-fluid h-100 pt-5">
+			<h1 class="header">C'est Fini</h1>
+			<div class="content">
+				<p>If any of this tickled your fancy at all I'd love to hear from you.</p>
+				<p>jonalderink@gmail.com</p>
+				<p>Best wishes and kindest regards,</p>
+			</div>
+			<span class="author">Jon Alderink</span>
+		</section>
+
+
+
+		<!-- Scrollama script -->
+		<script type="text/javascript">
+			const scroller = scrollama();
+
+			scroller
+				.setup({
+					step: ".step",
+					// debug: true,
+					offset: 0.50,
+
+				})
+				.onStepEnter((response) => {
+					console.log(response)
+					response.element.classList.remove('inactive');
+					response.element.classList.add('active');
+
+				})
+				.onStepExit((response) => {
+					console.log(response)
+					response.element.classList.remove('active');
+					response.element.classList.add('inactive');
+				});
+
+			window.addEventListener("resize", scroller.resize);
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/8.9.1/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/8.9.1/firebase-analytics.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+	</body>
+
+</html>
