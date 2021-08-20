@@ -267,6 +267,9 @@ img.step.inactive {
         "...content content ... ..."
         "... ... ... ... name";
 }
+#end .header{
+	font-size: 6rem;
+}
 
 .img-container {
     width: 100%;
@@ -334,9 +337,9 @@ img.step.inactive {
         padding: .5rem 1rem 1rem
     }
 
-    /* .container {
+    .container {
 				grid-template-columns: repeat(1, 1fr);
-			} */
+			}
     .w-1, .w-2, .w-3, {
         grid-column: span 1;
     }
@@ -372,10 +375,10 @@ img.step.inactive {
     }
 
     #pageTwo {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-            "header header header"
-            "content pic2 pic2";
+            "header header"
+            "content pic2";
     }
 
     #pageThree {
@@ -411,14 +414,19 @@ img.step.inactive {
             "content content content"
             "... name name";
     }
+
 }
 
 /* Mobile Layout */
 @media screen and (max-width:600px) {
     h1, h1.header, h1.title {
-        font-size: 4rem;
+        font-size: 4rem!important;
         line-height: 3rem;
     }
+
+	p{
+		font-size: 1.2rem;
+	}
 
     .w-1, .w-2, .w-3, .w-4, .w-5, .w-6{
         grid-column: span 1;
