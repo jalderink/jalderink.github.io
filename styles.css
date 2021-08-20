@@ -43,14 +43,19 @@ h1 {
     grid-area: name;
 }
 
-.text-rotate {
-    -webkit-transform: rotate(90deg);
-}
-
 section {
     min-height: 100%;
     display: grid;
     grid-gap: .75rem;
+}
+
+section#pageSix {
+    min-height: 100%;
+}
+
+video {
+    height: auto;
+    width: 100%;
 }
 
 section img {
@@ -111,11 +116,11 @@ img.step.inactive {
 }
 
 /* CSS Grid settings */
-
 /* ONE */
 #pageOne .image1 {
     grid-area: pic1;
 }
+
 #pageOne .image2 {
     grid-area: pic2;
 }
@@ -152,13 +157,62 @@ img.step.inactive {
     grid-area: pic51;
 }
 
+.w-1 {
+    grid-column: span 1;
+}
+
+.w-2 {
+    grid-column: span 2;
+}
+
+.w-3 {
+    grid-column: span 3;
+}
+
+.w-4 {
+    grid-column: span 4;
+}
+
+.w-5 {
+    grid-column: span 5;
+}
+
+.w-6 {
+    grid-column: span 6;
+}
+
+.h-1 {
+    grid-row: span 1;
+}
+
+.h-2 {
+    grid-row: span 2;
+}
+
+.h-3 {
+    grid-row: span 3;
+}
+
+.h-4 {
+    grid-row: span 4;
+}
+
+.h-5 {
+    grid-row: span 5;
+}
+
+.h-6 {
+    grid-row: span 6;
+}
+
+/* Desktop layout */
 #intro {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 200px 75px 1fr;
     grid-template-areas:
-        "... title title title title"
-        "... ... ... ... name"
-        "... content content ... ...";
+        "title title title title title"
+        "... ... ... name name"
+        "content content content ... ...";
 }
 
 #pageOne {
@@ -167,7 +221,7 @@ img.step.inactive {
     grid-template-areas:
         "header header header header header"
         "pic2 pic2 content content content"
-		"... ... pic1 pic1 pic1";
+        "... ... pic1 pic1 pic1";
 }
 
 #pageTwo {
@@ -192,98 +246,252 @@ img.step.inactive {
     grid-template-rows: auto;
     grid-template-areas:
         "header header header header header"
-		"pic41 pic41 pic41 content content";
+        "pic41 pic41 pic41 content content";
 }
 
 #pageFive {
-	display: grid;
-	margin:20px;
-    padding:0;
-    text-align:center;
+    display: grid;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows:200px 100px 300px;
-	grid-auto-flow: dense;
-}
-
-.img-container{
-    width:100%;
-    height:100%;
-    position:relative;
-}
-
-.img-container .image{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
-
-.img-container .image img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    object-position:50% 50%;
-    /* cursor:pointer; */
-    transition:.5s ease-in-out;
-}
-.img-container:hover .image img{
-    transform:scale(1.5);
-}
-
-.w-1{
-    grid-column: span 1;
-}
-.w-2{
-    grid-column: span 2;
-}
-.w-3{
-    grid-column: span 3;
-}
-.w-4{
-    grid-column: span 4;
-}
-.w-5{
-    grid-column: span 5;
-}
-/* .w-6{
-    grid-column: span 6;
-} */
-
-.h-1{
-    grid-row: span 1;
-}
-.h-2{
-    grid-row: span 2;
-}
-.h-3{
-    grid-row: span 3;
-}
-.h-4{
-    grid-row: span 4;
-}
-.h-5{
-    grid-row: span 5;
-}
-/* .h-6{
-    grid-row: span 6;
-} */
-
-
-
-
-@media screen and (max-width:500px){
-    .container{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
-        grid-column:span 1;
-    }
+    grid-auto-rows: 200px 100px 300px;
+    grid-auto-flow: dense;
 }
 
 #end {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 200px 200px 1fr;
-	grid-template-areas:
+    grid-template-areas:
         "... header header header ..."
-		"...content content ... ..."
-		"... ... ... ... name";
+        "...content content ... ..."
+        "... ... ... ... name";
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-container .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    /* cursor:pointer; */
+    transition: .5s ease-in-out;
+}
+
+.img-container:hover .image img {
+    transform: scale(1.1);
+}
+
+/* Tablet layout */
+@media screen and (max-width:961px) {
+    h1.title {
+        font-size: 6rem;
+        line-height: 5rem;
+        letter-spacing: -.1rem;
+        margin-bottom: .5rem;
+    }
+
+    h1 {
+        font-size: 6rem;
+        line-height: 5rem;
+        letter-spacing: -.1rem;
+        margin-bottom: .5rem;
+    }
+
+    .author {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1rem;
+        letter-spacing: .012rem;
+    }
+
+    section {
+        min-height: auto;
+        grid-gap: .5rem;
+    }
+
+    section img {
+        position: inherit;
+    }
+
+    div.step {
+        color: #e0e0e0;
+        height: auto;
+    }
+
+    .step.content {
+        padding: .5rem 1rem 1rem
+    }
+
+    /* .container {
+				grid-template-columns: repeat(1, 1fr);
+			} */
+    .w-1, .w-2, .w-3, {
+        grid-column: span 1;
+    }
+
+    .w-4, .w-5, .w-6 {
+        grid-column: span 2;
+    }
+
+    .h-1, .h-2, .h-3, {
+        grid-row: span 2;
+    }
+
+    .h-4, .h-5, .h-6 {
+        grid-row: span 3;
+    }
+
+    #intro {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 50px 1fr;
+        grid-template-areas:
+            "title title"
+            "... ... name"
+            "content content";
+    }
+
+    #pageOne {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header"
+            "pic2 content content"
+            "pic1 pic1 pic1";
+    }
+
+    #pageTwo {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "header header header"
+            "content pic2 pic2";
+    }
+
+    #pageThree {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header header"
+            "pic31 pic31 content content"
+            "pic31 pic31 content content"
+            "pic32 pic32 content content";
+    }
+
+    #pageFour {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "pic41"
+            "content";
+    }
+
+    #pageFive {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 300px;
+        grid-auto-flow: dense;
+    }
+
+    #end {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px 200px 1fr;
+        grid-template-areas:
+            "header header header"
+            "content content content"
+            "... name name";
+    }
+}
+
+/* Mobile Layout */
+@media screen and (max-width:600px) {
+    h1, h1.header, h1.title {
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+
+    .w-1, .w-2, .w-3, .w-4, .w-5, .w-6{
+        grid-column: span 1;
+    }
+
+
+    /* .h-1, .h-2, .h-3, {
+        grid-row: span 2;
+    }
+
+    .h-4, .h-5, .h-6 {
+        grid-row: span 3;
+    } */
+
+    #intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 40px 1fr;
+        grid-template-areas:
+            "title"
+            "name"
+            "content";
+    }
+
+    #pageOne {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "pic2"
+            "content"
+            "pic1";
+    }
+
+    #pageTwo {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "content"
+            "pic2";
+    }
+
+    #pageThree {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "pic31"
+            "content"
+            "pic32 ";
+    }
+
+    #pageFour {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "content"
+            "pic41";
+    }
+
+    #pageFive {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        grid-auto-flow: dense;
+    }
+
+    #end {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "content"
+            "name";
+    }
 }
